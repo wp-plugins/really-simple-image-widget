@@ -8,11 +8,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easiest way to add images in your sidebar
+Easiest way to add image in your sidebar
 
 == Description ==
 
-Really Simple Image Widget is the easiest way to add image in your sidebar.
+Really Simple Image Widget is the easiest way to add image in your sidebar. Chose image from your Media, save it and done.
 
 
 == Installation ==
