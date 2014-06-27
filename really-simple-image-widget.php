@@ -4,7 +4,7 @@ Plugin Name: Really Simple Image Widget
 Plugin URI: http://wordpress.org/plugins/really-simple-image-widget/
 Description: Easiest way to add image in your sidebar
 Author: Nilambar Sharma
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://www.nilambar.net
 */
 
@@ -45,6 +45,7 @@ class Really_Simple_Image_Widget  extends WP_Widget {
         $title            = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title'], $instance, $this->id_base);
         $rsiw_image_url     = ! empty( $instance['rsiw_image_url'] ) ? $instance['rsiw_image_url'] : '' ;
         $rsiw_link          = ! empty( $instance['rsiw_link'] ) ? $instance['rsiw_link'] : '' ;
+        $rsiw_alt_text      = ! empty( $instance['rsiw_alt_text'] ) ? $instance['rsiw_alt_text'] : '' ;
         $rsiw_open_link     = ! empty( $instance['rsiw_open_link'] ) ? $instance['rsiw_open_link'] : false ;
         $rsiw_image_caption = ! empty( $instance['rsiw_image_caption'] ) ? $instance['rsiw_image_caption'] : '';
         $rsiw_disable_link_in_title     = ! empty( $instance['rsiw_disable_link_in_title'] ) ? $instance['rsiw_disable_link_in_title'] : false ;
@@ -91,7 +92,9 @@ class Really_Simple_Image_Widget  extends WP_Widget {
             }
           }
 
-          $imgtag = '<img src="' . esc_url( $rsiw_image_url ) . '" alt="" '.$width_text.' />';
+          $alt_text = ( ! empty( $rsiw_alt_text ) ) ? $rsiw_alt_text : basename($rsiw_image_url);
+
+          $imgtag = '<img src="' . esc_url( $rsiw_image_url ) . '" alt="' . esc_attr( $alt_text ) . '" '.$width_text.' />';
 
           echo '<div class="image-wrapper">';
           echo sprintf( '<div class="rsiw-image" %s>%s%s%s</div>',
@@ -128,6 +131,7 @@ class Really_Simple_Image_Widget  extends WP_Widget {
         $instance['title']                        = strip_tags( stripslashes($new_instance['title']) );
         $instance['rsiw_image_url']               = esc_url($new_instance['rsiw_image_url']);
         $instance['rsiw_link']                    = esc_url($new_instance['rsiw_link']);
+        $instance['rsiw_alt_text']                = esc_attr($new_instance['rsiw_alt_text']);
         $instance['rsiw_open_link']               = isset($new_instance['rsiw_open_link']);
         $instance['rsiw_disable_link_in_title']   = isset($new_instance['rsiw_disable_link_in_title']);
         $instance['rsiw_disable_link_in_caption'] = isset($new_instance['rsiw_disable_link_in_caption']);
@@ -147,6 +151,7 @@ class Really_Simple_Image_Widget  extends WP_Widget {
           'title'                        =>  '',
           'rsiw_image_url'               =>  '',
           'rsiw_link'                    =>  '',
+          'rsiw_alt_text'                =>  '',
           'rsiw_open_link'               =>  0,
           'rsiw_image_caption'           =>  '',
           'rsiw_disable_link_in_title'   =>  0,
@@ -155,6 +160,7 @@ class Really_Simple_Image_Widget  extends WP_Widget {
         $title                        =   htmlspecialchars($instance['title']);
         $rsiw_image_url               =   esc_url($instance['rsiw_image_url']);
         $rsiw_link                    =   esc_url($instance['rsiw_link']);
+        $rsiw_alt_text                =   esc_attr($instance['rsiw_alt_text']);
         $rsiw_open_link               =   esc_attr($instance['rsiw_open_link']);
         $rsiw_image_caption           =   esc_textarea( $instance[ 'rsiw_image_caption' ] );
         $rsiw_disable_link_in_title   =   esc_attr($instance['rsiw_disable_link_in_title']);
@@ -179,6 +185,13 @@ class Really_Simple_Image_Widget  extends WP_Widget {
         <input class="widefat" id="<?php echo $this->get_field_id('rsiw_link'); ?>"
         name="<?php echo $this->get_field_name('rsiw_link'); ?>" type="text" value="<?php echo $rsiw_link; ?>" />
     </p>
+
+    <p>
+      <label for="<?php echo $this->get_field_id('rsiw_alt_text'); ?>"><?php _e('Alt Text', 'really-simple-image-widget'); ?>:</label>
+        <input class="widefat" id="<?php echo $this->get_field_id('rsiw_alt_text'); ?>"
+        name="<?php echo $this->get_field_name('rsiw_alt_text'); ?>" type="text" value="<?php echo $rsiw_alt_text; ?>" />
+    </p>
+
 
     <p>
       <label for="<?php echo $this->get_field_id('rsiw_open_link'); ?>"><?php _e('Open in New Window', 'really-simple-image-widget'); ?>:</label>
