@@ -3,8 +3,8 @@ Contributors: rabmalin
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ramrojob1%40gmail%2ecom&lc=US&item_name=Nilambar%20Sharma&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: image widget, widget, media, media manager, sidebar, image, photo, picture
 Requires at least: 3.5.1
-Tested up to: 3.9.1
-Stable tag: 1.0.2
+Tested up to: 3.9.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,11 @@ Easiest way to add image in your sidebar
 
 == Description ==
 
-Really Simple Image Widget is the easiest way to add image in your sidebar. Chose image from your Media, save it and done.
+<strong>Really Simple Image Widget</strong> is the easiest way to add image in your sidebar. Choose image from your Media, save it and done. Really simple, isn't it?
+
+If you like this plugin, please [rate and review](http://wordpress.org/support/view/plugin-reviews/really-simple-image-widget).
+If you have any question, suggestion or issue, please [post here](http://wordpress.org/support/plugin/really-simple-image-widget).
+
 
 
 == Installation ==
@@ -45,6 +49,9 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/rea
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Bug Fix: getimagesize() issue
 
 = 1.0.2 =
 * Add option for Alt tag in Image. If empty then filename is used.
