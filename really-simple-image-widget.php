@@ -83,8 +83,10 @@ class Really_Simple_Image_Widget  extends WP_Widget {
           $sizes = array();
           $width_text ='';
 
-          if (function_exists('getimagesize')) {
-            $sizes = getimagesize($rsiw_image_url);
+          if ( ini_get( 'allow_url_fopen' ) ) {
+            if (function_exists('getimagesize')) {
+              $sizes = getimagesize($rsiw_image_url);
+            }
           }
           if (!empty($sizes)) {
             if ( isset($sizes[3]) && '' != $sizes[3] ) {
