@@ -4,8 +4,8 @@ Plugin Name: Really Simple Image Widget
 Plugin URI: http://wordpress.org/plugins/really-simple-image-widget/
 Description: Easiest way to add image in your sidebar
 Author: Nilambar Sharma
-Version: 1.0.3
 Author URI: http://www.nilambar.net
+Version: 1.0.4
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
