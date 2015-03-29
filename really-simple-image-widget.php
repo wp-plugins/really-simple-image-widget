@@ -5,16 +5,16 @@ Plugin URI: http://wordpress.org/plugins/really-simple-image-widget/
 Description: Easiest way to add image in your sidebar
 Author: Nilambar Sharma
 Author URI: http://www.nilambar.net
-Version: 1.0.4
+Version: 1.1
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define('REALLY_SIMPLE_WIDGET_NAME','Really Simple Image Widget');
-define('REALLY_SIMPLE_WIDGET_SLUG','really-simple-image-widget');
+define( 'REALLY_SIMPLE_WIDGET_NAME', 'Really Simple Image Widget' );
+define( 'REALLY_SIMPLE_WIDGET_SLUG', 'really-simple-image-widget' );
 
 // For Upload field
-require_once(__DIR__ . "/fields/upload/upload.php");
+require_once( __DIR__ . "/fields/upload/upload.php" );
 
 class Really_Simple_Image_Widget  extends WP_Widget {
 
@@ -168,19 +168,36 @@ class Really_Simple_Image_Widget  extends WP_Widget {
         $rsiw_disable_link_in_title   =   esc_attr($instance['rsiw_disable_link_in_title']);
         $rsiw_disable_link_in_caption =   esc_attr($instance['rsiw_disable_link_in_caption']);
 ?>
+    <style>
+      .rsiw-preview-wrap{
+        margin-top: 10px;
+      }
+    </style>
     <p>
         <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'really-simple-image-widget'); ?>:</label>
         <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title ; ?>" />
     </p>
 
-    <p>
+    <div>
       <label for="<?php echo $this->get_field_id('rsiw_image_url'); ?>"><?php _e('Image', 'really-simple-image-widget'); ?></label>:<br />
-      <input type="text" class="img" name="<?php echo $this->get_field_name('rsiw_image_url'); ?>" id="<?php echo $this->get_field_id('rsiw_image_url'); ?>" value="<?php echo $instance['rsiw_image_url']; ?>" />
-      <input type="button" class="select-img button" value="<?php _e('Upload', 'really-simple-image-widget'); ?>" />
-      <?php if (! empty( $rsiw_image_url ) ): ?>
-        <img src="<?php echo $rsiw_image_url; ?>" alt="<?php _e('Preview', 'really-simple-image-widget'); ?>" style="width:100%; margin-top:5px;" title="<?php _e('Preview', 'really-simple-image-widget'); ?>" />
-      <?php endif ?>
-    </p>
+      <input type="text" class="img widefat" name="<?php echo $this->get_field_name('rsiw_image_url'); ?>" id="<?php echo $this->get_field_id('rsiw_image_url'); ?>" value="<?php echo $instance['rsiw_image_url']; ?>" /><br />
+      <input type="button" class="select-img button button-primary" value="<?php _e('Upload', 'really-simple-image-widget'); ?>" data-uploader_title="<?php _e( 'Select Image', 'really-simple-image-widget' ); ?>" data-uploader_button_text="<?php _e( 'Choose Image', 'really-simple-image-widget' ); ?>" style="margin-top:5px;" />
+
+      <?php
+        $full_image_url = '';
+        if (! empty( $rsiw_image_url ) ){
+          $full_image_url = $rsiw_image_url;
+        }
+        $wrap_style = '';
+        if ( empty( $full_image_url ) ) {
+          $wrap_style = ' style="display:none;" ';
+        }
+      ?>
+      <div class="rsiw-preview-wrap" <?php echo $wrap_style; ?>>
+        <img src="<?php echo esc_url( $full_image_url ); ?>" alt="<?php _e('Preview', 'really-simple-image-widget'); ?>" style="max-width: 100%;"  />
+      </div><!-- .rsiw-preview-wrap -->
+
+    </div>
 
     <p>
       <label for="<?php echo $this->get_field_id('rsiw_link'); ?>"><?php _e('Link', 'really-simple-image-widget'); ?>:</label>
@@ -212,7 +229,7 @@ class Really_Simple_Image_Widget  extends WP_Widget {
 
     <p>
       <label for="<?php echo $this->get_field_id('rsiw_image_caption'); ?>"><?php _e('Caption', 'really-simple-image-widget'); ?>:</label>
-      <textarea class="widefat" rows="5" id="<?php echo $this->get_field_id('rsiw_image_caption'); ?>" name="<?php echo $this->get_field_name('rsiw_image_caption'); ?>"><?php echo $rsiw_image_caption; ?></textarea>
+      <textarea class="widefat" rows="2" id="<?php echo $this->get_field_id('rsiw_image_caption'); ?>" name="<?php echo $this->get_field_name('rsiw_image_caption'); ?>"><?php echo $rsiw_image_caption; ?></textarea>
     </p>
 
 <?php }
