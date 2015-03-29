@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: really-simple-image-widget\n"
+"POT-Creation-Date: 2014-06-27 15:57+0545\n"
+"PO-Revision-Date: 2014-06-27 15:57+0545\n"
+"Last-Translator: Nilambar Sharma <nilambar@outlook.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../../really-simple-image-widget\n"
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:29
+msgid "Easiest way to add image in your sidebar"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:37
+msgid "Really Simple Image Widget"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:170
+msgid "Title"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:175
+msgid "Image"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:177
+msgid "Upload"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:179
+msgid "Preview"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:184
+msgid "Link"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:190
+msgid "Alt Text"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:197
+msgid "Open in New Window"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:202
+msgid "Disable Link in Title"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:207
+msgid "Disable Link in Caption"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:212
+msgid "Caption"
+msgstr ""
