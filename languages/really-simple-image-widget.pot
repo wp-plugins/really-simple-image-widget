@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: really-simple-image-widget\n"
-"POT-Creation-Date: 2015-03-27 17:14+0545\n"
-"PO-Revision-Date: 2015-03-27 17:14+0545\n"
+"POT-Creation-Date: 2015-08-11 14:01+0545\n"
+"PO-Revision-Date: 2015-08-11 14:01+0545\n"
 "Last-Translator: Nilambar Sharma <nilambar@outlook.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -18,54 +18,67 @@ msgstr ""
 msgid "Easiest way to add image in your sidebar"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:37
+#: ../../really-simple-image-widget/really-simple-image-widget.php:32
 msgid "Really Simple Image Widget"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:177
+#: ../../really-simple-image-widget/really-simple-image-widget.php:176
 msgid "Title"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:182
-msgid "Image"
+#: ../../really-simple-image-widget/really-simple-image-widget.php:181
+msgid "Image URL"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:184
+#: ../../really-simple-image-widget/really-simple-image-widget.php:183
 msgid "Upload"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:184
+#: ../../really-simple-image-widget/really-simple-image-widget.php:183
 msgid "Select Image"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:184
+#: ../../really-simple-image-widget/really-simple-image-widget.php:183
 msgid "Choose Image"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:197
+#: ../../really-simple-image-widget/really-simple-image-widget.php:196
 msgid "Preview"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:203
-msgid "Link"
+#: ../../really-simple-image-widget/really-simple-image-widget.php:202
+msgid "Image Width"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:209
+#: ../../really-simple-image-widget/really-simple-image-widget.php:204
+#: ../../really-simple-image-widget/really-simple-image-widget.php:210
+msgid "in pixel"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:208
+msgid "Image Height"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:214
 msgid "Alt Text"
 msgstr ""
 
-#: ../../really-simple-image-widget/really-simple-image-widget.php:216
-msgid "Open in New Window"
-msgstr ""
-
-#: ../../really-simple-image-widget/really-simple-image-widget.php:221
-msgid "Disable Link in Title"
+#: ../../really-simple-image-widget/really-simple-image-widget.php:220
+msgid "Link"
 msgstr ""
 
 #: ../../really-simple-image-widget/really-simple-image-widget.php:226
-msgid "Disable Link in Caption"
+msgid "Open in New Window"
 msgstr ""
 
 #: ../../really-simple-image-widget/really-simple-image-widget.php:231
+msgid "Disable Link in Title"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:236
+msgid "Disable Link in Caption"
+msgstr ""
+
+#: ../../really-simple-image-widget/really-simple-image-widget.php:241
 msgid "Caption"
 msgstr ""

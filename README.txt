@@ -1,10 +1,10 @@
 === Really Simple Image Widget ===
 Contributors: rabmalin
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ramrojob1%40gmail%2ecom&lc=US&item_name=Nilambar%20Sharma&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Donate link: http://www.nilambar.net
 Tags: image widget, widget, media, media manager, sidebar, image, photo, picture, simple, image size
 Requires at least: 3.8
-Tested up to: 4.2
-Stable tag: 1.1
+Tested up to: 4.3
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,11 @@ Nice, make a post on the [Support Forum](http://wordpress.org/support/plugin/rea
 
 
 == Changelog ==
+
+= 1.2 =
+* Add width and height field in widget
+* Remove getimagesize() function
+* WP 4.3 compatibility check
 
 = 1.1 =
 * New media upload popup
